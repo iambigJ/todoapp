@@ -10,7 +10,7 @@ var userId;
 
 beforeAll(async () => {
     hash = await hashPassword("password")
-    const create = await User.create({ email: "reza@gmail.com", password: hash })
+    const create = await User.create({ email: "alijavadij@gmail.com", password: hash })
     userId = create.id
 })
 afterAll(async () => {
@@ -38,7 +38,7 @@ describe("Unit test for Auth!", () => {
     })
     it("Password not found!", async () => {
         const USER_DATA = {
-            email: "reza@gmail.com"
+            email: "alijavadij@gmail.com"
         }
         const res = await request
             .post('/api/v1/auth/login')
@@ -70,7 +70,7 @@ describe("Unit test for Auth!", () => {
     it("Password not match!", async () => {
 
         const dto = {
-            email: "reza@gmail.com",
+            email: "alijavadij@gmail.com",
             password: "passwor"
         }
         const compare = await comparePassword(dto.password, hash)
@@ -79,7 +79,7 @@ describe("Unit test for Auth!", () => {
     it("Password  match!", async () => {
 
         const dto = {
-            email: "reza@gmail.com",
+            email: "alijavadij@gmail.com",
             password: "password"
         }
         const compare = await comparePassword(dto.password, hash)

@@ -10,7 +10,7 @@ const { hashPassword } = require("../../../src/utils/bcrypt.utils")
 beforeAll(async()=>{
     const hash = await hashPassword("password")
     await User.create({
-        email: "reza@gmail.com",
+        email: "alijavadij@gmail.com",
         password: hash
     })
     
@@ -25,7 +25,7 @@ afterAll(async()=>{
 describe("Auth test .", () => {
     it("should login",async () => {
         const data = {
-            email: "reza@gmail.com",
+            email: "alijavadij@gmail.com",
             password: "password"
         }
 
@@ -56,7 +56,7 @@ describe("Auth test .", () => {
 
     it("User password wrong",async () => {
         const data = {
-            email: "reza@gmail.com", 
+            email: "alijavadij@gmail.com",
             password: "passwordd" // Password wrong .
         }
 
@@ -89,7 +89,7 @@ describe("Auth test .", () => {
     })
     it("password was empty",async () => {
         const data = {
-            email:'reza@gmail.com' , 
+            email:'alijavadij@gmail.com' , 
             password: ''
         }
 

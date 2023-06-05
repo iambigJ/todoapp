@@ -41,10 +41,10 @@ if (cluster.isPrimary) {
     // In this case it is an HTTP server
     http.createServer(app).listen(port, async () => {
         try {
-            let existUser = await User.findOne({ where: { email: "reza@gmail.com" } })
+            let existUser = await User.findOne({ where: { email: "alijavadij@gmail.com" } })
             if (!existUser) {
                 const hash = await hashPassword("password")
-                await User.create({ email: "reza@gmail.com", password: hash })
+                await User.create({ email: "alijavadij@gmail.com", password: hash })
             }
         } catch (error) {
             console.log(error)
@@ -61,10 +61,10 @@ if (cluster.isPrimary) {
 
 // server.listen(port, async () => {
 //     try {
-//         let existUser = await User.findOne({ where: { email: "reza@gmail.com" } })
+//         let existUser = await User.findOne({ where: { email: "alijavadij@gmail.com" } })
 //         if (!existUser) {
 //             const hash = await hashPassword("password")
-//             await User.create({ email: "reza@gmail.com", password: hash })
+//             await User.create({ email: "alijavadij@gmail.com", password: hash })
 //         }
 //     } catch (error) {
 //         console.log(error)

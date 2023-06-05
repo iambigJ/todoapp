@@ -53,7 +53,7 @@ If you can not pull any image with docker compose up you can use below command a
 ``` docker pull <image name>```
 
 ## Stay in touch
-- Author - [Reza Mousavi](https://www.linkedin.com/in/rzms/)
+- Author - [alijavadij Mousavi](https://www.linkedin.com/in/rzms/)
 
 ## License
 Express is [ISC licensed](LICENSE).

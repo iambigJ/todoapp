@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken")
 
 /* --------------------------------- Configs -------------------------------- */
 const USER_DATA = {
-    email: "reza@gmail.com",
+    email: "alijavadij@gmail.com",
     password: "password"
 }
 const DUMMY_DATA = {
@@ -23,7 +23,7 @@ const WRONG_DUMMY_DATA = {
 
 beforeAll(async () => {
     const hash = await hashPassword("password")
-    await User.create({ email: "reza@gmail.com", password: hash })
+    await User.create({ email: "alijavadij@gmail.com", password: hash })
 })
 afterAll(async () => {
     await Todo.destroy({

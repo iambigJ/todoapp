@@ -15,7 +15,7 @@
     "test:db:restart": "npm run test:db:rm && npm run test:db:up ",
     "test": "jest --watch  --detectOpenHandles"
   },
-  "author": "Reza Mousavi",
+  "author": "iambigj <alijavadij@gmial.com>",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
